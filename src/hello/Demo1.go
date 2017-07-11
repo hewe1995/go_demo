@@ -1,7 +1,7 @@
-package hello
+//hello.go
+package main
 
-import "fmt"
+//main
+func main() {
 
-func main()  {
-	fmt.Println("nihao")
 }

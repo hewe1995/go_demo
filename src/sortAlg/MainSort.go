@@ -119,3 +119,4 @@ func writeToFile(values []int, outFile string) (err error) {
 	}
 	return
 }
+
