@@ -27,6 +27,21 @@ func TestMark(t *testing.T) {
 	if arr2 == nil {
 		fmt.Println("nil")
 	}
-	arr2 = arr
+	arr2 = arr[:]
 
+}
+
+const PORT  = 8080
+
+func HelloHanlder(w http.ResponseWriter, req *http.Request)  {
+	fmt.Println("handling...")
+	fmt.Fprint(w, "hello :" + req.URL.Path[:])
+}
+func TestHttpServer(t *testing.T)  {
+	http.HandleFunc("/", HelloHanlder)
+	err := http.ListenAndServe("localhost:8080",nil)
+	if err != nil {
+		fmt.Println("err : ", err)
+		return
+	}
 }

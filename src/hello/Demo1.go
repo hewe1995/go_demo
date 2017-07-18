@@ -2,17 +2,17 @@
 package main
 
 import (
-	"os"
 	"fmt"
 )
 
 //main
 func main() {
-	file, err := os.OpenFile("ni", 2, 0666)
-	if err != nil {
-
+	Test()
+}
+func Test(){
+	for i := 0; i < 10; i ++ {
+		defer func() {
+			fmt.Println("defer execute")
+		}()
 	}
-	defer file.Close()
-	name := file.Name()
-	fmt.Println(name)
 }
