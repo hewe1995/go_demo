@@ -3,13 +3,15 @@ package main
 
 import (
 	"fmt"
+	"path"
 )
 
 //main
 func main() {
-	Test()
+	path := path.Join("parent", "child")
+	fmt.Println(path)
 }
-func Test(){
+func Test() {
 	for i := 0; i < 10; i ++ {
 		defer func() {
 			fmt.Println("defer execute")
