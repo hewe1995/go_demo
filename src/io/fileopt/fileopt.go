@@ -71,10 +71,10 @@ func copyFile() {
 	io.Copy(dst, file)
 }
 func main() {
-	//fmt.Println(getCurrentPath())
+	fmt.Println(getCurrentPath())
 	//readFileVerticle()
 	//writeOrCreateFile()
-	copyFile()
+	//copyFile()
 }
 func getCurrentPath() string {
 	s, err := exec.LookPath(os.Args[0])
